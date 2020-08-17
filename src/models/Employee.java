@@ -38,7 +38,7 @@ public class Employee {
     private Integer id;
 
     @Column(name = "code", nullable = true, unique = true)
-    private Integer code;
+    private String code;
 
     @Column(name = "name", nullable = true)
     private String name;
@@ -66,11 +66,11 @@ public class Employee {
         this.id = id;
     }
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
