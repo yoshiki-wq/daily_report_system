@@ -49,7 +49,7 @@ public class EmployeesIndexServlet extends HttpServlet {
 
         em.close();
 
-        request.setAttribute("emoloyees", employees);
+        request.setAttribute("employees", employees);
         request.setAttribute("employees_count", employees_count);
         request.setAttribute("page", page);
         if(request.getSession().getAttribute("flush") != null) {
