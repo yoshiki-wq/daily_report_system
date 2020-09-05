@@ -49,11 +49,11 @@ public class Employee {
     @Column(name = "admin_flag", nullable = true)
     private Integer admin_flag;
 
-    @Column(name = "create_at", nullable = true)
-    private Timestamp create_at;
+    @Column(name = "created_at", nullable = true)
+    private Timestamp created_at;
 
-    @Column(name = "update_at", nullable = true)
-    private Timestamp updata_at;
+    @Column(name = "updated_at", nullable = true)
+    private Timestamp updated_at;
 
     @Column(name = "delete_flag", nullable = true)
     private Integer delete_flag;
@@ -98,20 +98,20 @@ public class Employee {
         this.admin_flag = admin_flag;
     }
 
-    public Timestamp getCreate_at() {
-        return create_at;
+    public Timestamp getCreated_at() {
+        return created_at;
     }
 
-    public void setCreate_at(Timestamp create_at) {
-        this.create_at = create_at;
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
     }
 
-    public Timestamp getUpdata_at() {
-        return updata_at;
+    public Timestamp getUpdated_at() {
+        return updated_at;
     }
 
-    public void setUpdata_at(Timestamp updata_at) {
-        this.updata_at = updata_at;
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
     }
 
     public Integer getDelete_flag() {

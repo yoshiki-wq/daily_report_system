@@ -46,7 +46,7 @@ public class EmployeesDestroyServlet extends HttpServlet {
 
             Employee e = em.find(Employee.class, (Integer)(request.getSession().getAttribute("employee_id")));
             e.setDelete_flag(1);
-            e.setUpdata_at(new Timestamp(System.currentTimeMillis()));
+            e.setUpdated_at(new Timestamp(System.currentTimeMillis()));
 
             em.getTransaction().begin();
             em.getTransaction().commit();

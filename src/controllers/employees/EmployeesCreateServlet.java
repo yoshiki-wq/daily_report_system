@@ -53,8 +53,8 @@ public class EmployeesCreateServlet extends HttpServlet {
             e.setAdmin_flag(Integer.parseInt(request.getParameter("admin_flag")));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
-            e.setCreate_at(currentTime);
-            e.setUpdata_at(currentTime);
+            e.setCreated_at(currentTime);
+            e.setUpdated_at(currentTime);
             e.setDelete_flag(0);
 
             List<String> errors = EmployeeValidators.validate(e, true, true);
