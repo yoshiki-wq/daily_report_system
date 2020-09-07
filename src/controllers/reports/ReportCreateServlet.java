@@ -47,7 +47,7 @@ public class ReportCreateServlet extends HttpServlet {
 
             Date report_date = new Date(System.currentTimeMillis());
             String rd_str = request.getParameter("report_date");
-            if(rd_str != null && rd_str.equals("")) {
+            if(rd_str != null && !rd_str.equals("")) {
                 report_date = Date.valueOf(request.getParameter("report_date"));
             }
             r.setReport_date(report_date);
