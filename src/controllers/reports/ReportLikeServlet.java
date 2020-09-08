@@ -34,8 +34,17 @@ public class ReportLikeServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         Report r = em.find(Report.class, Integer.parseInt(request.getParameter("id")));
+        Integer like = r.getLike_count() + 1;
+        r.setLike_count(like);
 
+        em.getTransaction().begin();
+        em.getTransaction().commit();
         em.close();
+        request.getSession().setAttribute("flush", "いいねしました。");
+
+        request.getSession().removeAttribute("report_id");
+
+        response.sendRedirect(request.getContextPath() + "/reports/index");
 
 
     }

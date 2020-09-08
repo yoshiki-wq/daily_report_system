@@ -59,6 +59,9 @@ public class ReportCreateServlet extends HttpServlet {
             r.setCreated_at(currentTime);
             r.setUpdated_at(currentTime);
 
+            // いいね数に初期値0を設定する処理
+            r.setLike_count(0);
+
             List<String> errors = ReportValidator.validate(r);
             if(errors.size() > 0) {
                 em.close();
